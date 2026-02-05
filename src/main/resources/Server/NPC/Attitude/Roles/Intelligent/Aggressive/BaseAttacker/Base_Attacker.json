@@ -1,0 +1,13 @@
+{
+  "Groups": {
+    "Friendly": [
+      "Base_Attacker"
+    ],
+    "Hostile": [
+      "Citizen"
+    ],
+    "Revered": [
+      "Trork_Chieftain"
+    ]
+  }
+}

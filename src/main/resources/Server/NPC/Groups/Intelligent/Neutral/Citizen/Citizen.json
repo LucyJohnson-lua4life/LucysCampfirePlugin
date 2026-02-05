@@ -1,0 +1,6 @@
+{
+  "IncludeRoles": [
+    "*Static_Human*",
+    "*Intelligent_Human*"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "Groups": {
+    "Friendly": [
+      "Citizen"
+    ],
+    "Hostile": [
+      "Base_Attacker"
+    ]
+  }
+}

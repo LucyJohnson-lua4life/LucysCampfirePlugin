@@ -1,0 +1,54 @@
+{
+  "Class": "Instruction",
+  "Parameters": {
+    "_ImportStates": [ "Chase" ],
+    "AlertedRange": {
+      "Value": 30,
+      "Description": "A range within which the player can be seen/sensed when the NPC is alerted to their presence"
+    }
+  },
+  "Content": {
+    "Sensor": {
+      "Type": "And",
+      "Sensors": [
+        {
+          "Type": "Not",
+          "Sensor": {
+            "Type": "Damage",
+            "Friendly": true
+          }
+        },
+        {
+          "Type": "Damage",
+          "Combat": true,
+          "TargetSlot": "LockedTarget"
+        }
+      ]
+    },
+    "Instructions": [
+      {
+        "Sensor": {
+          "Type": "Target",
+          "Range": { "Compute": "AlertedRange" },
+          "AutoUnlockTarget": true,
+          "Filters": [
+            {
+              "Type": "LineOfSight"
+            }
+          ]
+        },
+        "Actions": [
+          {
+            "Type": "AddToHostileTargetMemory"
+          },
+          {
+            "Type": "ParentState",
+            "State": "Chase"
+          }
+        ]
+      }
+
+    ]
+  },
+  "Type": "Component"
+}

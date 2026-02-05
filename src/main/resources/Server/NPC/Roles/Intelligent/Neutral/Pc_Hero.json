@@ -1,0 +1,19 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Pc_Hero",
+  "Modify": {
+    "Appearance": "Player",
+    "DropList": "Drop_Kweebec_Sapling_Razorleaf",
+    "MaxHealth": 105,
+    "IsMemory": true,
+    "MemoriesCategory": "Kweebec",
+    "MemoriesNameOverride": "Kweebec_Sapling",
+    "NameTranslationKey": { "Compute": "NameTranslationKey" }
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Pc_Hero.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}
