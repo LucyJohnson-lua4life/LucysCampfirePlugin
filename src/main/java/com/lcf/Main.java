@@ -5,6 +5,7 @@ import com.lcf.commands.ExampleCommand;
 import com.lcf.commands.HealEntityCommand;
 import com.lcf.commands.SpawnSpecialNpcCommand;
 import com.lcf.commands.TargetAttackCommand;
+import com.lcf.events.RegisterPlayerEvent;
 import com.lcf.systems.CustomNPCDeathSystem;
 import com.lcf.systems.TriggerWorldEventSystem;
 import com.hypixel.hytale.logger.HytaleLogger;
@@ -34,6 +35,7 @@ public class Main extends JavaPlugin {
         registry.registerSystem(new TriggerWorldEventSystem());
         registry.registerSystem(new CustomNPCDeathSystem());
         NPCPlugin.get().registerCoreComponentType("NPCDialog", BuilderActionOpenFightDialog::new);
+        RegisterPlayerEvent.init(this.getEventRegistry());
         //Model citizenModel = new Model.ModelReference(citizen.getModelId(), scale, randomAttachmentIds).toModel();
         /*
         if(NPCPlugin.get() != null){
