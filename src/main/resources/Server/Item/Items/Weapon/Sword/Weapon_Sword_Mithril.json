@@ -55,7 +55,7 @@
           "Parent": "Weapon_Sword_Primary_Swing_Left_Damage",
           "DamageCalculator": {
             "BaseDamage": {
-              "Physical": 27
+              "Physical": 29
             }
           },
           "DamageEffects": {
@@ -71,7 +71,7 @@
           "Parent": "Weapon_Sword_Primary_Swing_Right_Damage",
           "DamageCalculator": {
             "BaseDamage": {
-              "Physical": 27
+              "Physical": 29
             }
           },
           "DamageEffects": {
@@ -87,7 +87,7 @@
           "Parent": "Weapon_Sword_Primary_Swing_Down_Damage",
           "DamageCalculator": {
             "BaseDamage": {
-              "Physical": 30
+              "Physical": 32
             }
           },
           "DamageEffects": {
@@ -158,7 +158,7 @@
         {
           "Parent": "Weapon_Sword_Secondary_Guard_Wield",
           "StaminaCost": {
-            "Value": 40,
+            "Value": 50,
             "CostType": "Damage"
           }
         }

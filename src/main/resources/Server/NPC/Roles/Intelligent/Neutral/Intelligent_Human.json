@@ -1,6 +1,6 @@
 {
   "Type": "Variant",
-  "Reference": "Template_Intelligent",
+  "Reference": "Template_Interactable_Intelligent",
   "Parameters": {
     "WanderRadius": {
       "Value": 3,
@@ -28,7 +28,7 @@
     }
   },
   "Modify": {
-    "MaxHealth": 40,
+    "MaxHealth": 100,
     "HearingRange": 8,
     "ViewSector": 270,
     "WakingPeriod": [
@@ -38,13 +38,9 @@
     "DropList": "Drop_Skeleton_Knight",
     "Appearance": "Player",
     "Weapons": [
-      "Weapon_Sword_Steel_Rusty"
-    ],
-    "OffHand": [
-      "Weapon_Shield_Rusty"
+      "Weapon_Sword_Iron"
     ],
     "DefaultOffHandSlot": 0,
-
     "FollowPatrolPath": {
       "Compute": "FollowPatrolPath"
     },

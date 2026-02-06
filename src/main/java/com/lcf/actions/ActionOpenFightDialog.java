@@ -1,5 +1,6 @@
 package com.lcf.actions;
 
+import com.lcf.pages.FightDialogPage;
 import com.lcf.pages.HelloWorldPage;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
@@ -42,7 +43,7 @@ public class ActionOpenFightDialog extends ActionBase {
                 if (playerComponent == null) {
                     return false;
                 } else {
-                    playerComponent.getPageManager().openCustomPage(ref, store, new HelloWorldPage(playerRefComponent, CustomPageLifetime.CantClose, "Hello World"));
+                    playerComponent.getPageManager().openCustomPage(ref, store, new FightDialogPage(playerRefComponent, ref, "Blabla Fight Text"));
                     //context.sendMessage(Message.raw("trying to apply the attack!"));
 
                     return true;
