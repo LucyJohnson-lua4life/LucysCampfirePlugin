@@ -11,36 +11,20 @@ Group {
   LayoutMode: Top;
   Padding: (Full: 24);
 
+
   Label #Headline {
-    Text: "Welcome to Lucys Campfire!";
+    Text: "You encountered a lone Warrior...";
     Anchor: (Height: 55);
     Style: (
-      FontSize: 32,
+      FontSize: 24,
       TextColor: #ffffff,
-      HorizontalAlignment: Center,
       RenderBold: true
-    );
-  }
-
-  Group {
-    Anchor: (Height: 1);
-    Background: #2b3542;
-  }
-
-  Group { Anchor: (Height: 16); }
-
-  Label #Message {
-    Text: "Select the background of your character!";
-    Anchor: (Height: 50);
-    Style: (
-      FontSize: 16,
-      TextColor: #96a9be
     );
   }
 
   Label #Message {
     Text:
-"Bla Bla Test fight or leave.";
+"You stumble upon a lone warrior standing amidst the misty clearing, armor dented and bloodied. His sword rests heavily in his hands, eyes scanning the treeline. He notices you, grip tightening—friend or foe, it’s unclear, but the tension in the air is unmistakable.";
     Anchor: (Height: 50);
     Style: (
       FontSize: 16,
@@ -53,22 +37,17 @@ Group {
 
   Group { Anchor: (Height: 80); }
 
-
-
-
   Group {
     LayoutMode: Center;
     Anchor: (Height: 50);
 
     TextButton #FightButton {
       Text: "Fight";
-      Anchor: (Width: 140, Height: 44);
+      Anchor: (Width: 550, Height: 40);
       Style: @PrimaryButtonStyle;
     }
 
   }
-
-    Group { Anchor: (Height: 50); }
 
     Group {
       LayoutMode: Center;
@@ -76,7 +55,7 @@ Group {
 
       TextButton #LeaveButton {
         Text: "Leave";
-        Anchor: (Width: 140, Height: 44);
+        Anchor: (Width: 550, Height: 40);
         Style: @PrimaryButtonStyle;
       }
 
