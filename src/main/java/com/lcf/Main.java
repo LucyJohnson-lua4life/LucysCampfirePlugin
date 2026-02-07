@@ -34,7 +34,7 @@ public class Main extends JavaPlugin {
         //OpenCustomUIInteraction.registerCustomPageSupplier(this, NPCDialogInteractionSupplier.class, "NPCDialog", new NPCDialogInteractionSupplier());
         registry.registerSystem(new TriggerWorldEventSystem());
         registry.registerSystem(new CustomNPCDeathSystem());
-        NPCPlugin.get().registerCoreComponentType("NPCDialog", BuilderActionOpenFightDialog::new);
+        NPCPlugin.get().registerCoreComponentType("Fight_Dialog", BuilderActionOpenFightDialog::new);
         RegisterPlayerEvent.init(this.getEventRegistry());
         //Model citizenModel = new Model.ModelReference(citizen.getModelId(), scale, randomAttachmentIds).toModel();
         /*

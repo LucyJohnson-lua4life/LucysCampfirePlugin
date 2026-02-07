@@ -29,13 +29,16 @@ import java.util.Map;
 public class FightDialogPage extends InteractiveCustomUIPage<FightDialogPage.DialogEventData> {
 
     private final String dialogText;
+    private final String dialogHeading;
     private Ref<EntityStore> fighterRef;
     private double searchTime = 0;
     private boolean searchForEnemy = false;
 
     private final Map<String, String> roleToCombatActionMapping = Map.of("Lone_Warrior", "Chase",
+            "Lone_Trork_Gladiator", "Chase",
             "Intelligent_Human", "Combat");
     private final Map<String, String> roleToSearchActionMapping = Map.of("Lone_Warrior", "Search",
+            "Lone_Trork_Gladiator", "Search",
             "Intelligent_Human", "Search.Confused");
 
 
@@ -51,8 +54,9 @@ public class FightDialogPage extends InteractiveCustomUIPage<FightDialogPage.Dia
     }
 
 
-    public FightDialogPage(@Nonnull PlayerRef playerRef, @Nonnull Ref<EntityStore> fighterRef, String dialogText) {
+    public FightDialogPage(@Nonnull PlayerRef playerRef, @Nonnull Ref<EntityStore> fighterRef, String dialogHeading, String dialogText) {
         super(playerRef, CustomPageLifetime.CantClose, DialogEventData.CODEC);
+        this.dialogHeading = dialogHeading;
         this.dialogText = dialogText;
         this.fighterRef = fighterRef;
     }
@@ -67,6 +71,9 @@ public class FightDialogPage extends InteractiveCustomUIPage<FightDialogPage.Dia
     ) {
 
         commandBuilder.append("Pages/FightDialogPage.ui");
+
+        commandBuilder.set("#Headline.Text", this.dialogHeading);
+        commandBuilder.set("#Message.Text", this.dialogText);
 
         eventBuilder.addEventBinding(CustomUIEventBindingType.Activating, "#FightButton");
         eventBuilder.addEventBinding(CustomUIEventBindingType.Activating, "#LeaveButton");

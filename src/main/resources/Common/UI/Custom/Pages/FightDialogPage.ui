@@ -27,7 +27,7 @@ Group {
 "You stumble upon a lone warrior standing amidst the misty clearing, armor dented and bloodied. His sword rests heavily in his hands, eyes scanning the treeline. He notices you, grip tightening—friend or foe, it’s unclear, but the tension in the air is unmistakable.";
     Anchor: (Height: 50);
     Style: (
-      FontSize: 16,
+      FontSize: 17,
       TextColor: #96a9be,
       Wrap: true
     );
@@ -35,7 +35,7 @@ Group {
 
 
 
-  Group { Anchor: (Height: 80); }
+  Group { Anchor: (Height: 250); }
 
   Group {
     LayoutMode: Center;
@@ -43,7 +43,7 @@ Group {
 
     TextButton #FightButton {
       Text: "Fight";
-      Anchor: (Width: 550, Height: 40);
+      Anchor: (Width: 700, Height: 40);
       Style: @PrimaryButtonStyle;
     }
 
@@ -55,7 +55,7 @@ Group {
 
       TextButton #LeaveButton {
         Text: "Leave";
-        Anchor: (Width: 550, Height: 40);
+        Anchor: (Width: 700, Height: 40);
         Style: @PrimaryButtonStyle;
       }
 

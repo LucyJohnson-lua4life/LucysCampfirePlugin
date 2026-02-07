@@ -58,10 +58,10 @@ public class ClassSelectionUtils {
     private static Inventory createRoyalGuardInventory(){
         ItemContainer armor = new SimpleItemContainer((short) 4);
 
-        armor.setItemStackForSlot((short) 0, new ItemStack("Armor_Adamantite_Head", 1));
-        armor.setItemStackForSlot((short) 1, new ItemStack("Armor_Adamantite_Chest", 1));
-        armor.setItemStackForSlot((short) 2, new ItemStack("Armor_Adamantite_Hands", 1));
-        armor.setItemStackForSlot((short) 3, new ItemStack("Armor_Adamantite_Legs", 1));
+        armor.setItemStackForSlot((short) 0, new ItemStack("Armor_Mithril_Head", 1));
+        armor.setItemStackForSlot((short) 1, new ItemStack("Armor_Mithril_Chest", 1));
+        armor.setItemStackForSlot((short) 2, new ItemStack("Armor_Mithril_Hands", 1));
+        armor.setItemStackForSlot((short) 3, new ItemStack("Armor_Mithril_Legs", 1));
 
 
         ItemContainer hotbar = new SimpleItemContainer((short) 9);

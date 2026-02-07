@@ -15,7 +15,7 @@ public class BuilderActionOpenFightDialog extends BuilderActionBase {
     @Nonnull
     @Override
     public String getShortDescription() {
-        return "Open the barter shop UI for the current player";
+        return "This will be refactored at some point.";
     }
 
     @Nonnull

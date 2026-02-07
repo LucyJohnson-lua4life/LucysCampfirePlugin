@@ -14,9 +14,16 @@ import com.hypixel.hytale.server.npc.role.Role;
 import com.hypixel.hytale.server.npc.sensorinfo.InfoProvider;
 
 import javax.annotation.Nonnull;
+import java.util.List;
+import java.util.Random;
 
 public class ActionOpenFightDialog extends ActionBase {
 
+    private final List<String> randomDialogs = List.of("You stumble upon a lone warrior standing amidst the misty clearing, armor dented and bloodied. His sword rests heavily in his hands, eyes scanning the treeline. He notices you, grip tightening—friend or foe, it’s unclear, but the tension in the air is unmistakable."
+    ,"You find a lone fighter kneeling by a dying campfire, sharpening his sword with slow, practiced strokes. He looks up as you approach, eyes hard from battle, yet weary. The fire crackles, the moment heavy with unspoken tension."
+    ,"You encounter a solitary warrior on the battlefield’s outskirts, surrounded by fallen foes. His blade drips crimson as he turns toward you, expression unreadable. Whether he sees you as the next enemy remains uncertain."
+    , "A grim warrior emerges from the fog, armor marked by fresh battle. He halts when he sees you, weapon angled low but ready. The fog swirls between you, blurring friend and foe in the uncertain light.");
+    private final Random rand = new Random();
 
     public ActionOpenFightDialog(@Nonnull BuilderActionOpenFightDialog builder, @Nonnull BuilderSupport support) {
         super(builder);
@@ -43,7 +50,10 @@ public class ActionOpenFightDialog extends ActionBase {
                 if (playerComponent == null) {
                     return false;
                 } else {
-                    playerComponent.getPageManager().openCustomPage(ref, store, new FightDialogPage(playerRefComponent, ref, "Blabla Fight Text"));
+                    int dialogIndex = rand.nextInt(randomDialogs.size());
+                    String randomDialog =  randomDialogs.get(dialogIndex);
+
+                    playerComponent.getPageManager().openCustomPage(ref, store, new FightDialogPage(playerRefComponent, ref, "You encountered a lone Warrior...",randomDialog));
                     //context.sendMessage(Message.raw("trying to apply the attack!"));
 
                     return true;

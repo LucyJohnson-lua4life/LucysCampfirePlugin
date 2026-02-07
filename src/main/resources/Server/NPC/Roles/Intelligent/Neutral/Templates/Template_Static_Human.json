@@ -131,7 +131,7 @@
         },
         "Actions": [
           {
-            "Type": "NPCDialog"
+            "Type": "Fight_Dialog"
           }
         ]
       }
