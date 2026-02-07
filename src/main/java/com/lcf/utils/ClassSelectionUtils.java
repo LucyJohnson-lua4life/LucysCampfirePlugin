@@ -84,9 +84,11 @@ public class ClassSelectionUtils {
 
         ItemContainer hotbar = new SimpleItemContainer((short) 9);
         hotbar.setItemStackForSlot((short) 0, new ItemStack("Weapon_Staff_Wood", 1));
-        hotbar.setItemStackForSlot((short) 1, new ItemStack("Tool_Pickaxe_Mithril", 1));
-        hotbar.setItemStackForSlot((short) 2, new ItemStack("Food_Bread", 25));
-        hotbar.setItemStackForSlot((short) 3, new ItemStack("Potion_Health_Large", 10));
+        hotbar.setItemStackForSlot((short) 1, new ItemStack("Weapon_Deployable_Slowness_Totem", 1));
+        hotbar.setItemStackForSlot((short) 2, new ItemStack("Weapon_Deployable_Healing_Totem", 1));
+        hotbar.setItemStackForSlot((short) 3, new ItemStack("Tool_Pickaxe_Mithril", 1));
+        hotbar.setItemStackForSlot((short) 4, new ItemStack("Food_Bread", 25));
+        hotbar.setItemStackForSlot((short) 5, new ItemStack("Potion_Health_Large", 10));
 
         return new Inventory(EmptyItemContainer.INSTANCE, armor, hotbar,EmptyItemContainer.INSTANCE,EmptyItemContainer.INSTANCE,EmptyItemContainer.INSTANCE);
     }
