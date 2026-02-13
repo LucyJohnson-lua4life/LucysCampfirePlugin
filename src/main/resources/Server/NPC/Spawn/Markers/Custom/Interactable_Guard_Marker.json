@@ -1,0 +1,12 @@
+{
+  "Model": "NPC_Spawn_Marker",
+  "NPCs": [
+    {
+      "Name": "Interactable_Guard",
+      "Weight": 10,
+      "RealtimeRespawnTime": 60
+    }
+  ],
+  "ExclusionRadius": 0,
+  "RealtimeRespawn": true
+}

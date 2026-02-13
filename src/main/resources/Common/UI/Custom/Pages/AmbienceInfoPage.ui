@@ -1,0 +1,57 @@
+@PrimaryButtonStyle = TextButtonStyle(
+  Default: (Background: #3a7bd5, LabelStyle: (FontSize: 16, TextColor: #ffffff, RenderBold: true, RenderUppercase: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+  Hovered: (Background: #4a8be5, LabelStyle: (FontSize: 16, TextColor: #ffffff, RenderBold: true, RenderUppercase: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+  Pressed: (Background: #2a6bc5, LabelStyle: (FontSize: 16, TextColor: #ffffff, RenderBold: true, RenderUppercase: true, HorizontalAlignment: Center, VerticalAlignment: Center))
+);
+
+
+Group {
+  Anchor: (Width: 750, Height: 550);
+  Background: #141c26(0.98);
+  LayoutMode: Top;
+  Padding: (Full: 24);
+
+
+  Label #Headline {
+    Text: "You encountered a lone Warrior...";
+    Anchor: (Height: 55);
+    Style: (
+      FontSize: 24,
+      TextColor: #ffffff,
+      RenderBold: true
+    );
+  }
+
+  Label #Message {
+    Text:
+"You stumble upon a lone warrior standing amidst the misty clearing, armor dented and bloodied. His sword rests heavily in his hands, eyes scanning the treeline. He notices you, grip tightening—friend or foe, it’s unclear, but the tension in the air is unmistakable.";
+    Anchor: (Height: 50);
+    Style: (
+      FontSize: 17,
+      TextColor: #96a9be,
+      Wrap: true
+    );
+  }
+
+
+
+  Group { Anchor: (Height: 250); }
+
+
+
+    Group {
+      LayoutMode: Center;
+      Anchor: (Height: 50);
+
+      TextButton #LeaveButton {
+        Text: "Leave";
+        Anchor: (Width: 700, Height: 40);
+        Style: @PrimaryButtonStyle;
+      }
+
+    }
+
+
+  Group { Anchor: (Height: 10); }
+
+}

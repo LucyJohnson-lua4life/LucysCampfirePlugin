@@ -1,5 +1,6 @@
 package com.lcf;
 
+import com.lcf.actions.BuilderActionOpenAmbienceInfoDialog;
 import com.lcf.actions.BuilderActionOpenFightDialog;
 import com.lcf.commands.ExampleCommand;
 import com.lcf.commands.HealEntityCommand;
@@ -35,7 +36,8 @@ public class Main extends JavaPlugin {
         registry.registerSystem(new TriggerWorldEventSystem());
         registry.registerSystem(new CustomNPCDeathSystem());
         NPCPlugin.get().registerCoreComponentType("Fight_Dialog", BuilderActionOpenFightDialog::new);
-        RegisterPlayerEvent.init(this.getEventRegistry());
+        NPCPlugin.get().registerCoreComponentType("Ambience_Info_Dialog", BuilderActionOpenAmbienceInfoDialog::new);
+        RegisterPlayerEvent.init(this);
         //Model citizenModel = new Model.ModelReference(citizen.getModelId(), scale, randomAttachmentIds).toModel();
         /*
         if(NPCPlugin.get() != null){

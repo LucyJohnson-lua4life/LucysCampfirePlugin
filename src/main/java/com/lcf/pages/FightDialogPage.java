@@ -133,9 +133,6 @@ public class FightDialogPage extends InteractiveCustomUIPage<FightDialogPage.Dia
 //                    player.sendMessage(Message.raw("Time passed: " + this.searchTime));
                     return false;
                 });
-
-
-
             }
             player.getPageManager().setPage(ref, store, Page.None);
         }

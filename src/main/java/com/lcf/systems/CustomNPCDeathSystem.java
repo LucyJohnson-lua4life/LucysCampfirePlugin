@@ -27,17 +27,14 @@ public class CustomNPCDeathSystem extends DeathSystems.OnDeathSystem {
 
         world.getPlayerRefs().forEach(playerRef -> {
             Player player = store.getComponent(playerRef.getReference(), Player.getComponentType());
-            player.sendMessage(Message.raw("Someone Died!"));
+            //player.sendMessage(Message.raw("Someone Died!"));
             NPCEntity npc = store.getComponent(ref, NPCEntity.getComponentType());
             if(npc != null){
                 String roleName = npc.getRole().getRoleName();
                 if(roleName != null){
-                    player.sendMessage(Message.raw("Death Event triggered!: " + roleName));
+                    //player.sendMessage(Message.raw("Death Event triggered!: " + roleName));
                 }
             }
-
-
-            //StatModifiersManager
 
         });
 

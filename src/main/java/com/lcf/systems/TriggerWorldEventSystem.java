@@ -31,7 +31,7 @@ public class TriggerWorldEventSystem extends TickingSystem<EntityStore>{
 
             world.getPlayerRefs().forEach(playerRef -> {
                 Player player = store.getComponent(playerRef.getReference(), Player.getComponentType());
-                player.sendMessage(Message.raw("Your world: " + world.getName()));
+                //player.sendMessage(Message.raw("Your world: " + world.getName()));
 
                 //StatModifiersManager
 
